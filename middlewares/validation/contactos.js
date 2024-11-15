@@ -56,6 +56,6 @@ export const validarEditarContacto = [
     check("fechaNacimiento").notEmpty().withMessage("No se actualizo la Fecha de Nacimiento.").isISO8601().withMessage('Fecha de nacimiento de documento debe ser formato fecha!'),
     check("sexo").notEmpty().withMessage("No se actualizo el sexo").escape(),
     check("telefono").notEmpty().withMessage("No se actualizo el telefono").escape(),
-    check("correoElectronico").notEmpty().withMessage("Debe digitar el correo Electronico").normalizeEmail().isEmail().withMessage('Correo electronico invalido'),
+    check("email").notEmpty().withMessage("Debe digitar el correo Electronico").normalizeEmail().isEmail().withMessage('Correo electronico invalido'),
     check("password").notEmpty().withMessage("No se actualizo el  password").escape(),   
   ]
