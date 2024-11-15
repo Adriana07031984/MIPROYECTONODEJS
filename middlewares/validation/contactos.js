@@ -50,7 +50,7 @@ export const validarConsContacto = [
 ]; 
 
 //validación de datos al editar trabajador
-export const validarEditarTrabajador = [
+export const validarEditarContacto = [
     check("nombres").notEmpty().withMessage("No se actualizo los nombres").escape(),
     check("apellidos").notEmpty().withMessage("No se actualizo los apellidos").escape(),
     check("fechaNacimiento").notEmpty().withMessage("No se actualizo la Fecha de Nacimiento.").isISO8601().withMessage('Fecha de nacimiento de documento debe ser formato fecha!'),

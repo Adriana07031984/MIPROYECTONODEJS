@@ -13,7 +13,7 @@ import {
 } from "../controllers/contactos.controllers.js";
 import { resultadoValidacion } from "../../helpers/validateHelper.js";
 import {validarConsContacto } from "../../middlewares/validation/contactos.js";
-import {validarEditarTrabajador} from "../../middlewares/validation/contactos.js";
+import {validarEditarContacto} from "../../middlewares/validation/contactos.js";
     //validarHabilitarTrabajador,
   //validarEditarTrabajador,
   //validarElimTrabajador,
@@ -31,7 +31,7 @@ router.get(
    /*  PRUEBA */
 router.put(
     "/contacto/editarContacto", 
-    actualizarFirmaContacto); 
+    validarEditarContacto,resultadoValidacion,editarContacto); 
 
     router.get(
         "/contacto/elimContacto/email/:email",

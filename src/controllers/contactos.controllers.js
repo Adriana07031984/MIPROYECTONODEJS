@@ -705,7 +705,7 @@ export const consContacto = async (req, res) => {
       const database = await db.connect();
       const collection = database.collection("contactos");
       const result = await collection.updateOne(
-        { numeroDocumento }, //---> para validar el registro que se va a actualizar
+        { email }, //---> para validar el registro que se va a actualizar
         {
           $set: {
             nombres,
@@ -735,7 +735,7 @@ export const consContacto = async (req, res) => {
         res.status(404).json(formatoRta("", "", "Contacto no encontrado"));
       }
     } catch (error) {
-      console.error("Error en editTrabajador:", error);
+      console.error("Error en editar Contacto:", error);
       res
         .status(500)
         .json(
